@@ -28,7 +28,7 @@ function FutureWeather() {
           Daily
         </h3>
       </div>
-      <div className='flex flex-row gap-10 mt-4 overflow-y-hidden overflow-x-scroll'>
+      <div className='flex flex-row gap-10 mt-4 md:mt-7 overflow-y-hidden overflow-x-scroll'>
         {weather &&
           weather[mode].map((data, index) => {
             const date = new Date(data.dt * 1000);

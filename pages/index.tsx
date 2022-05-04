@@ -56,9 +56,9 @@ const Home: NextPage = () => {
           />
           {width < 769 && <SearchBar updateSearchTerm={updateSearchTerm} />}
         </div>
-        <div className='row-span-2 md:col-span-2 w-[92vw] h-full relative pl-[7vw] pr-[1vw] py-[3.5vh] md:gap-10'>
+        <div className='row-span-2 md:col-span-2 w-[92vw] md:w-full h-full relative pl-[7vw] pr-[1vw] py-[3.5vh]'>
           {width > 768 && <SearchBar updateSearchTerm={updateSearchTerm} />}
-          <div className='flex flex-col gap-4 md:gap-0'>
+          <div className='flex flex-col gap-4 md:gap-8 md:mt-10'>
             <h1 className='font-Clash font-bold text-6xl md:text-[6.6vw]'>
               {searchTerm.city}
             </h1>
