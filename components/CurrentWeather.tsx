@@ -7,18 +7,20 @@ function CurrentWeather() {
   return (
     <div className='flex flex-col'>
       <div className='flex flex-col'>
-        <h3 className='font-Clash text-5xl font-medium'>Currently</h3>
-        <p className='text-xl text-[#717171]'>
+        <h3 className='font-Clash text-3xl md:text-[3.3vw] font-medium'>
+          Currently
+        </h3>
+        <p className='md:text-[1.4vw] text-[#717171]'>
           {weather &&
             weather.current.weather[0].description.charAt(0).toUpperCase() +
               weather.current.weather[0].description.slice(1)}
         </p>
       </div>
-      <div className='flex flex-row gap-10 mt-4'>
-        <h2 className='font-Clash text-8xl'>
+      <div className='flex flex-row items-center gap-7 md:gap-10 overflow-y-hidden overflow-x-scroll'>
+        <h2 className='font-Clash text-6xl md:text-[6vw]'>
           {weather && Math.round(weather.current.temp)}ºC
         </h2>
-        <div className='flex flex-row gap-7'>
+        <div className='flex flex-row gap-5 md:gap-7'>
           <WeatherCondition
             label='Precipitation'
             value={

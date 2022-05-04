@@ -78,11 +78,11 @@ function SearchBar({ updateSearchTerm }: PropsType) {
   };
 
   return (
-    <div className='flex flex-col relative'>
-      <div className='relative w-fit'>
+    <div className='flex flex-col relative w-[85%] max-w-[500px] mx-auto md:mx-0 mt-[10vw] md:mt-0'>
+      <div className='relative w-full'>
         <input
           type='text'
-          className='w-[500px] h-[50px] border border-black px-5 py-4 text-2xl'
+          className='w-full h-[50px] border border-black px-5 py-4 text-2xl'
           placeholder='Search for a city'
           value={value}
           ref={searchInput}
@@ -102,7 +102,7 @@ function SearchBar({ updateSearchTerm }: PropsType) {
         </div>
       </div>
       {results.length > 0 && document.activeElement === searchInput.current && (
-        <div className='flex flex-col absolute top-[50px] bg-white w-[500px] p-5 gap-2 shadow-md max-h-60 overflow-y-scroll'>
+        <div className='flex flex-col absolute top-[50px] bg-white w-full p-5 gap-2 shadow-md max-h-60 overflow-y-scroll z-10'>
           {results.map((city, index) => (
             <p
               className='font-medium cursor-pointer hover:text-blue-600'
