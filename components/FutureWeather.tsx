@@ -11,16 +11,16 @@ function FutureWeather() {
     <div className='flex flex-col'>
       <div className='flex flex-row gap-1'>
         <h3
-          className={`font-Clash text-5xl cursor-pointer ${
+          className={`font-Clash text-3xl md:text-[3.3vw] cursor-pointer ${
             mode === "hourly" ? "font-medium" : "text-[#717171]"
           }`}
           onClick={() => setMode("hourly")}
         >
           Hourly
         </h3>
-        <p className='font-Clash text-5xl text-[#717171]'>/</p>
+        <p className='font-Clash text-3xl md:text-[3.3vw] text-[#717171]'>/</p>
         <h3
-          className={`font-Clash text-5xl cursor-pointer ${
+          className={`font-Clash text-3xl md:text-[3.3vw] cursor-pointer ${
             mode === "daily" ? "font-medium" : "text-[#717171]"
           }`}
           onClick={() => setMode("daily")}
@@ -28,7 +28,7 @@ function FutureWeather() {
           Daily
         </h3>
       </div>
-      <div className='flex flex-row gap-10 mt-4'>
+      <div className='flex flex-row gap-10 mt-4 md:mt-7 overflow-y-hidden overflow-x-scroll'>
         {weather &&
           weather[mode].map((data, index) => {
             const date = new Date(data.dt * 1000);

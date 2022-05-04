@@ -1,4 +1,6 @@
 import { IconContext } from "react-icons";
+import { useViewport } from "../hooks/UseViewportHook";
+
 import {
   WiDaySunny,
   WiNightClear,
@@ -42,11 +44,13 @@ const icons: { [icon: string]: JSX.Element } = {
 };
 
 function WeatherDetail({ label, value, icon }: PropsType) {
+  const { width } = useViewport();
+
   return (
     <div className='flex flex-col items-center text-center gap-1'>
-      <p className='text-xl'>{label}</p>
-      <p className='text-2xl font-medium'>{value}ºC</p>
-      <IconContext.Provider value={{ size: "42" }}>
+      <p className='md:text-[1.4vw]'>{label}</p>
+      <p className='text-lg md:text-[1.7vw] font-medium'>{value}ºC</p>
+      <IconContext.Provider value={{ size: width < 769 ? "36" : "3vw" }}>
         {icons[icon]}
       </IconContext.Provider>
     </div>
