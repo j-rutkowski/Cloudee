@@ -76,7 +76,7 @@ const Home: NextPage = () => {
             layout='fill'
             className='object-cover'
           />
-          <div className='absolute left-10 bottom-10'>
+          <div className='absolute left-5 bottom-5 md:left-10 md:bottom-10'>
             <p className='text-white'>
               Photo by:{" "}
               <a
